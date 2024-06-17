@@ -31,10 +31,10 @@
     <dd>
         @Html.DisplayFor(Model => Model.BaseSalary)
     </dd>
+</dl>
 
     <form asp-action="Delete" asp-route-id="@Model.Id">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" />
         <a asp-action="Index">Back to list</a>
     </form>
-</dl>
