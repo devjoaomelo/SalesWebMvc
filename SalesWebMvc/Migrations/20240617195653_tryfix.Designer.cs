@@ -12,8 +12,8 @@ using SalesWebMvc.Data;
 namespace SalesWebMvc.Migrations
 {
     [DbContext(typeof(SalesWebMvcContext))]
-    [Migration("20240617142637_OtherEntities")]
-    partial class OtherEntities
+    [Migration("20240617195653_tryfix")]
+    partial class tryfix
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -80,7 +80,7 @@ namespace SalesWebMvc.Migrations
                     b.Property<double>("BaseSalary")
                         .HasColumnType("double");
 
-                    b.Property<DateTime>("BrithDate")
+                    b.Property<DateTime>("BirthDate")
                         .HasColumnType("datetime(6)");
 
                     b.Property<int>("DepartmentId")
