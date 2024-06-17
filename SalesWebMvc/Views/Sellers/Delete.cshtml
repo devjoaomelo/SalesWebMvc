@@ -1,0 +1,40 @@
+﻿@model SalesWebMvc.Models.Seller
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+<dl class="">
+    <dt>
+        @Html.DisplayNameFor(Model => Model.Name)
+    </dt>
+    <dd>
+        @Html.DisplayFor(Model => Model.Name)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(Model => Model.Email)
+    </dt>
+    <dd>
+        @Html.DisplayFor(Model => Model.Email)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(Model => Model.BirthDate)
+    </dt>
+    <dd>
+        @Html.DisplayFor(Model => Model.BirthDate)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(Model => Model.BaseSalary)
+    </dt>
+    <dd>
+        @Html.DisplayFor(Model => Model.BaseSalary)
+    </dd>
+
+    <form asp-action="Delete" asp-route-id="@Model.Id">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index">Back to list</a>
+    </form>
+</dl>
