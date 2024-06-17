@@ -14,12 +14,12 @@ namespace SalesWebMvc
                 new MySqlServerVersion(new Version(8, 0, 21)),
                 builder => builder.MigrationsAssembly("SalesWebMvc")));
 
-            builder.Services.AddScoped<SeedingService>();
-            builder.Services.AddScoped<SellerService>();
-
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddScoped<SeedingService>();
+            builder.Services.AddScoped<SellerService>();
+            builder.Services.AddScoped<DepartmentService>();
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
