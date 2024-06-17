@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using SalesWebMvc.Data;
+
 namespace SalesWebMvc
 {
     public class Program
@@ -13,8 +13,7 @@ namespace SalesWebMvc
                 new MySqlServerVersion(new Version(8, 0, 21)),
                 builder => builder.MigrationsAssembly("SalesWebMvc")));
 
-            //options.UseMySql(builder.Configuration.GetConnectionString("SalesWebMvcContext"), builder => 
-            //builder.MigrationsAssembly("SalesWebMvc")));
+            builder.Services.AddScoped<SeedingService>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -27,6 +26,10 @@ namespace SalesWebMvc
                 app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
+                
+
+
+
             }
 
             app.UseHttpsRedirection();
@@ -40,7 +43,25 @@ namespace SalesWebMvc
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
+            SeedDb(app);
             app.Run();
+        }
+
+        private static void SeedDb(IHost app)
+        {
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    var seedingService = services.GetRequiredService<SeedingService>();
+                    seedingService.Seed();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error DB seed: " + ex);
+                }
+            }
         }
     }
 }
