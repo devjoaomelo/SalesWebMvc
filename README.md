@@ -53,7 +53,9 @@ Antes de executar o projeto, é necessário configurar as credenciais do banco d
     ```
 
 5. Execute a aplicação:
-   
+   ```sh
+    dotnet run
+    ```
 
 A aplicação estará disponível em `https://localhost:7236`.
 
