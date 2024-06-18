@@ -28,7 +28,7 @@ Antes de executar o projeto, é necessário configurar as credenciais do banco d
 
 - .NET Core SDK 3.1 ou superior
 - Visual Studio 2019 ou superior
-- SQL Server (ou outra base de dados compatível)
+- MySql(outra base de dados vai necessitar alteração no builder)
 
 ## Como executar
 
@@ -63,5 +63,5 @@ A aplicação estará disponível em `https://localhost:7236`.
 
 - ASP.NET Core
 - Entity Framework Core
-- SQL Server
+- MySql
 - Bootstrap
