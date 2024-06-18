@@ -57,7 +57,7 @@ Antes de executar o projeto, é necessário configurar as credenciais do banco d
     dotnet run
     ```
 
-A aplicação estará disponível em `https://localhost:5001`.
+A aplicação estará disponível em `https://localhost:7236`.
 
 ## Tecnologias Utilizadas
 
