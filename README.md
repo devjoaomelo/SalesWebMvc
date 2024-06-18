@@ -11,8 +11,6 @@ SalesWebMvc é um projeto de aprendizado em ASP.NET Core, focado no desenvolvime
 
 ## Requisitos
 
-## Configuração do Banco de Dados
-
 Antes de executar o projeto, é necessário configurar as credenciais do banco de dados no arquivo `appsettings.json`.
 
 1. Abra o arquivo `appsettings.json` localizado na raiz do projeto.
@@ -26,8 +24,7 @@ Antes de executar o projeto, é necessário configurar as credenciais do banco d
 
 3. Altere o userid para o seu user e o password para a sua senha
 
-   
-Para executar o projeto, é necessário ter os seguintes pré-requisitos instalados:
+4. Para executar o projeto, é necessário ter os seguintes pré-requisitos instalados:
 
 - .NET Core SDK 3.1 ou superior
 - Visual Studio 2019 ou superior
