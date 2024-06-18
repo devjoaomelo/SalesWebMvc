@@ -47,15 +47,13 @@ Antes de executar o projeto, é necessário configurar as credenciais do banco d
     dotnet restore
     ```
 
-4. Atualize o banco de dados:
+4. Atualize o banco de dados NuGet:
     ```sh
-    dotnet ef database update
+    Update-Database
     ```
 
 5. Execute a aplicação:
-    ```sh
-    dotnet run
-    ```
+6. 
 
 A aplicação estará disponível em `https://localhost:7236`.
 
